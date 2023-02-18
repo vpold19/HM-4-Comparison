@@ -68,32 +68,46 @@ public class Main {
     }
     public static void task6() {
         System.out.println("Задача 6");
-       int ticket=10;
-       System.out.println("Мой номер билета " + ticket);
-       if(ticket>0 && ticket<=60){
-           System.out.println("достанется сидячее место");
-       } else if(ticket>60 && ticket<=102){
-           System.out.println("достанется сидячее место");
-       } else if(ticket>102){
-           System.out.println("место не достанется");
-       }
+       int totalSeats=102;
+       int seats=60;
+       int standSeats=totalSeats-seats; // стоячия места
+        int seatsUsed=30;
+        int standSeatsUsed=25;
+        if( seatsUsed<seats){
+            System.out.println( (seats - seatsUsed) +  " сидячих мест осталось");
+        } else {
+        } System.out.println("Сидячих мест нет");
+        if (standSeatsUsed<standSeats) {
+        System.out.println( (standSeats - standSeatsUsed) +  " стоячих мест осталось");
+        } else {
+        } System.out.println("Стоячих мест нет");
     }
     public static void task7() {
         System.out.println("Задача 7");
-        int one=1;
-        int two=2;
-        int three=3;
-        boolean whichNumberIsSmaller=one<two && two<three;
-        if(whichNumberIsSmaller){
-            System.out.println(one + " самое маленькаое число из всех");
+        int one=45;
+        int two=30;
+        int three=15;
+        if(one>two){
+if(one>=three){
+    System.out.println("Максимальное число " + one);
+} else{
+    System.out.println("Максимальное число " + three);
+}
+    }else if(two>one) {
+            if (two >= three) {
+                System.out.println("Максимальное число " + two);
+            } else {
+                System.out.println("Максимальное число " + three);
+            }
+        }else{
+            if (one >= three) {
+                System.out.println("Максимальное число " + one);
+            } else if(three>one) {
+                System.out.println("Максимальное число " + three);
+            } else{
+                System.out.println("Все три числа равны");
+
+            }
+            }
         }
-        boolean whichNumberIsAverage=two>one && two<three;
-        if(whichNumberIsAverage){
-            System.out.println(two + " среднее число из всех ");
-        }
-        boolean whichNumberIsBigger= three>one && three>two;
-        if(whichNumberIsBigger){
-            System.out.println(three + " самое большое число из всех");
-        }
-    }
 }
